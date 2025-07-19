@@ -55,7 +55,7 @@ const Login: React.FC = () => {
     <div className="h-screen bg-gradient-to-br from-green-200 via-blue-100 to-purple-200 flex items-center justify-center">
       <div className="bg-white bg-opacity-90 p-8 rounded-xl shadow-lg w-full max-w-md">
         <h2 className="text-3xl font-bold text-center text-green-700 mb-6">
-          Login to Diet Generator App
+          Login to Diet Generator
         </h2>
         <Formik
           initialValues={initialValues}
