@@ -6,6 +6,8 @@ import ErrorComponent from "../components/ErrorComponent";
 import Dashboard from "../pages/Dashboard";
 import BMICalculatorForm from "../pages/bmi";
 import DieticianCardList from "../pages/Dietecian";
+import CreateGoalForm from "../pages/GoalCreation";
+import GoalCard from "../pages/GoalCard";
 
 
   
@@ -17,7 +19,9 @@ export const router = createBrowserRouter([
   {path:'/dashboard',element:<Dashboard/>,
     children:[
       {path:'',element:<DieticianCardList/>},
-      {path:'bmi',element:<BMICalculatorForm/>}
+      {path:'goals',element:<CreateGoalForm/>},
+      {path:'bmi',element:<BMICalculatorForm/>},
+      {path:'goalData',element:<GoalCard/>}
     ]
   },
   { path: '*', element: <ErrorComponent /> },
