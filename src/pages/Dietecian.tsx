@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
+import { useNavigate } from "react-router-dom";
 
 interface Dietician {
   _id: string;
@@ -12,7 +13,7 @@ interface Dietician {
 
 const DieticianCardList: React.FC = () => {
   const [dieticians, setDieticians] = useState<Dietician[]>([]);
-
+  const navigate = useNavigate();
   useEffect(() => {
     const fetchDieticians = async () => {
       try {
@@ -39,8 +40,8 @@ const DieticianCardList: React.FC = () => {
             <button
               className="mt-4 bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700 transition"
               onClick={() => {
-                // Navigate or open goal creation modal
-                console.log("Selected dietician:", dietician._id);
+                navigate('/')
+                
               }}
             >
               Create Goal

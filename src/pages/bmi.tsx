@@ -64,7 +64,6 @@ const BMICalculatorForm: React.FC = () => {
         ...values,
         userId,
       });
-      console.log("BMI Report Created:", response.data);
       
       alert(`your BMI is ${response.data.BMI}. You are ${response.data.category}`)
     } catch (error) {
